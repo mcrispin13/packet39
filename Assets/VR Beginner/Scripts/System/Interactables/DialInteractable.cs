@@ -175,6 +175,7 @@ public class DialInteractable : XRBaseInteractable
                     transform.rotation = newRBRotation;
                 
                 m_SyncTransform.transform.rotation = newRot;
+                Debug.Log("Slewbody rot: " + angle);
                 bodyRotation.Rotate(0, angle, 0);
 
                 m_GrabbedRotation = m_GrabbingInteractor.transform.rotation;
