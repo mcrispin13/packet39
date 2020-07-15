@@ -2015,10 +2015,20 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7666452437810447868, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7939384652354236607, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 2.679881
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939384652354236607, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_Limits.min
+      value: -52.769226
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2012784499674972115, guid: 65ca332c87d3f0d49a2873156237f4fa, type: 3}
@@ -2033,3 +2043,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6574959692861505300}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &6574959692861505302 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6687562564955057660, guid: 65ca332c87d3f0d49a2873156237f4fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6574959692861505300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6574959692861505303 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7666452437810447868, guid: 65ca332c87d3f0d49a2873156237f4fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6574959692861505300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6574959692861505304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4639720064723530022, guid: 65ca332c87d3f0d49a2873156237f4fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6574959692861505300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6574959692861505305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6574959692861505304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc6d0924e139494f9cd760bd46cffbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lever: {fileID: 6574959692861505302}
+  subBoomBody: {fileID: 6574959692861505303}
+  speed: 0.05
