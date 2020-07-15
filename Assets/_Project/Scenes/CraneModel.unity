@@ -1796,7 +1796,7 @@ PrefabInstance:
     - target: {fileID: 6687562564955057660, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6687562564955057660, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
@@ -1828,10 +1828,20 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7666452437810447868, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7939384652354236607, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 2.679881
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939384652354236607, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_Limits.min
+      value: -52.769226
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2012784499674972115, guid: 65ca332c87d3f0d49a2873156237f4fa, type: 3}
@@ -1875,3 +1885,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lever: {fileID: 6574959692861505302}
   subBoomBody: {fileID: 6574959692861505303}
+  speed: 0.05

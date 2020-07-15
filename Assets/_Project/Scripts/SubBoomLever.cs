@@ -12,12 +12,14 @@ public class SubBoomLever : MonoBehaviour
         float current_position = subBoomBody.gameObject.transform.position.x;
         current_position -= speed;
         current_position = (current_position < -1) ? -1f : current_position;
+        subBoomBody.gameObject.transform.position = new Vector3(current_position, 0, 0);
     }
     private void RetractBoom()
     {
         float current_position = subBoomBody.gameObject.transform.position.x;
         current_position += speed;
         current_position = (current_position > 0) ? 0 : current_position;
+        subBoomBody.gameObject.transform.position = new Vector3(current_position, 0, 0);
     }
     void Update()
     {
