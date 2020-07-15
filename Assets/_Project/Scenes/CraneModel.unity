@@ -1675,6 +1675,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2180947076838945886, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180947076838945886, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180947076838945886, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.162
+      objectReference: {fileID: 0}
     - target: {fileID: 2596957801229752701, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
       propertyPath: m_Enabled
@@ -2038,7 +2053,17 @@ PrefabInstance:
     - target: {fileID: 7666452437810447868, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
       propertyPath: m_LocalPosition.x
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666452437810447868, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666452437810447868, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7939384652354236607, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
@@ -2048,14 +2073,12 @@ PrefabInstance:
     - target: {fileID: 7939384652354236607, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
       propertyPath: m_Limits.min
-      value: -52.769226
+      value: -45
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2012784499674972115, guid: 65ca332c87d3f0d49a2873156237f4fa, type: 3}
     - {fileID: 2596957801229752701, guid: 65ca332c87d3f0d49a2873156237f4fa, type: 3}
-    - {fileID: 4660970919961679361, guid: 65ca332c87d3f0d49a2873156237f4fa, type: 3}
-    - {fileID: 4660970919961679360, guid: 65ca332c87d3f0d49a2873156237f4fa, type: 3}
-    - {fileID: 4660970919961679363, guid: 65ca332c87d3f0d49a2873156237f4fa, type: 3}
+    - {fileID: 3173783701447915723, guid: 65ca332c87d3f0d49a2873156237f4fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 65ca332c87d3f0d49a2873156237f4fa, type: 3}
 --- !u!4 &6574959692861505301 stripped
 Transform:
@@ -2095,4 +2118,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lever: {fileID: 6574959692861505302}
   subBoomBody: {fileID: 6574959692861505303}
-  speed: 0.05
+  speed: 0.01
