@@ -149,8 +149,8 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!138 &33461533
-FixedJoint:
+--- !u!114 &33461533
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -171,11 +171,11 @@ HingeJoint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33461527}
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 1331502748}
   m_Anchor: {x: 0.51, y: -0.01, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.1032203, y: 1.3794999, z: 0.73399997}
+  m_ConnectedAnchor: {x: -0.3365198, y: 7.249999, z: -0.043333374}
   m_UseSpring: 0
   m_Spring:
     spring: 0
