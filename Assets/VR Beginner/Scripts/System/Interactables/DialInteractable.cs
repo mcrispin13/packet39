@@ -14,7 +14,6 @@ using UnityEditor;
 /// </summary>
 public class DialInteractable : XRBaseInteractable
 {
-    public Transform bodyRotation;
     public enum InteractionType
     {
         ControllerRotation,
@@ -105,7 +104,7 @@ public class DialInteractable : XRBaseInteractable
                     //get the new angle between the original right and this new right along the up axis
                     angle = Vector3.SignedAngle(m_StartingWorldAxis, newRight, worldRotationAxis);
 
-                    //if (angle < 0) angle = 360 + angle;
+                    if (angle < 0) angle = 360 + angle;
                 }
                 else
                 {
@@ -128,10 +127,6 @@ public class DialInteractable : XRBaseInteractable
 
                     if (upDiff < lowerDiff) angle = 0;
                     else angle = RotationAngleMaximum;
-                }
-                else if ( angle < (-(RotationAngleMaximum)))
-                {
-                    angle = -(RotationAngleMaximum);
                 }
                 
                 float finalAngle = angle;
@@ -175,8 +170,6 @@ public class DialInteractable : XRBaseInteractable
                     transform.rotation = newRBRotation;
                 
                 m_SyncTransform.transform.rotation = newRot;
-                Debug.Log("Slewbody rot: " + angle);
-                bodyRotation.Rotate(0, angle, 0);
 
                 m_GrabbedRotation = m_GrabbingInteractor.transform.rotation;
             }
