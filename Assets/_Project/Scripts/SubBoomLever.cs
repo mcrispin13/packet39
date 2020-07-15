@@ -9,17 +9,17 @@ public class SubBoomLever : MonoBehaviour
     public float speed = 0.05f;
     private void ExtendBoom()
     {
-        float current_position = subBoomBody.gameObject.transform.position.x;
+        float current_position = subBoomBody.position.x;
         current_position -= speed;
-        current_position = (current_position < -1) ? -1f : current_position;
-        subBoomBody.gameObject.transform.position = new Vector3(current_position, 0, 0);
+        current_position = (current_position < -0.95) ? -0.95f : current_position;
+        subBoomBody.position = new Vector3(current_position, 0, 0);
     }
     private void RetractBoom()
     {
-        float current_position = subBoomBody.gameObject.transform.position.x;
+        float current_position = subBoomBody.position.x;
         current_position += speed;
         current_position = (current_position > 0) ? 0 : current_position;
-        subBoomBody.gameObject.transform.position = new Vector3(current_position, 0, 0);
+        subBoomBody.position = new Vector3(current_position, 0, 0);
     }
     void Update()
     {
