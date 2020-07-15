@@ -22,11 +22,11 @@ public class SubBoomLever : MonoBehaviour
     void Update()
     {
         float angle = lever.transform.eulerAngles.x;
-        if (angle > 0)
+        if (angle < 0)
         {
             ExtendBoom();
         }
-        if (angle < 0)
+        if (angle > 0)
         {
             RetractBoom();
         }
