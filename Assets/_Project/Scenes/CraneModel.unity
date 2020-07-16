@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5815c2701bd214fa0ae06ae362f9d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subBoom: {fileID: 932195588}
+  subBoom: {fileID: 0}
   speed: 5
 --- !u!1 &1138869868
 GameObject:
@@ -1885,6 +1885,21 @@ PrefabInstance:
       propertyPath: m_Colliders.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4660970919961679361, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660970919961679362, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660970919961679363, guid: 65ca332c87d3f0d49a2873156237f4fa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4660970919961679374, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2053,7 +2068,7 @@ PrefabInstance:
     - target: {fileID: 7666452437810447868, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.006
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 7666452437810447868, guid: 65ca332c87d3f0d49a2873156237f4fa,
         type: 3}
@@ -2118,4 +2133,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lever: {fileID: 6574959692861505302}
   subBoomBody: {fileID: 6574959692861505303}
+  boomBody: {fileID: 33461528}
   speed: 0.01
