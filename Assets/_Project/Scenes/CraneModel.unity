@@ -1847,10 +1847,22 @@ CanvasRenderer:
   m_GameObject: {fileID: 1327543585}
   m_CullTransparentMesh: 0
 --- !u!1 &1331502744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4660970919139635846, guid: 65ca332c87d3f0d49a2873156237f4fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6574959692861505300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1331502748
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331502744}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2026,6 +2038,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434630910}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 77455269}
+  - {fileID: 1675375218}
+  - {fileID: 484166512}
+  m_Father: {fileID: 1138869870}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
