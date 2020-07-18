@@ -18,7 +18,7 @@ public class BoomLever : MonoBehaviour
     {
         angle = lever.transform.eulerAngles.x;
         //if (angle < -9) angle = -9;
-        Debug.Log("Angle=" + angle);
+        //Debug.Log("Angle=" + angle);
         Change();
 
 
