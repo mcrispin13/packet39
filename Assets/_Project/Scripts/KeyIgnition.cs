@@ -6,10 +6,10 @@ public class KeyIgnition : MonoBehaviour
 {
     // Start is called before the first frame update
     private bool _active = false;
-    public DialInteractable Lever1;
-    public DialInteractable Lever2;
-    public DialInteractable Lever3;
-    public DialInteractable Lever4;
+    public GameObject Lever1;
+    public GameObject Lever2;
+    public GameObject Lever3;
+    public GameObject Lever4;
 
     public void Start()
     {
@@ -18,10 +18,10 @@ public class KeyIgnition : MonoBehaviour
 
     private void SetGameObjects()
     {
-        Lever1.gameObject.SetActive(_active);
-        Lever2.gameObject.SetActive(_active);
-        Lever3.gameObject.SetActive(_active);
-        Lever4.gameObject.SetActive(_active);
+        Lever1.layer = (_active)? 0 : 11;
+        Lever2.layer = (_active)? 0 : 11;
+        Lever3.layer = (_active)? 0 : 11;
+        Lever4.layer = (_active)? 0 : 11;
     }
     public void Toggle()
     {
