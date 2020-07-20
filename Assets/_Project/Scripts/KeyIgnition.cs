@@ -11,6 +11,8 @@ public class KeyIgnition : MonoBehaviour
     public GameObject Lever3;
     public GameObject Lever4;
 
+    public GameObject keyButton;
+
     public void Start()
     {
         SetGameObjects();
@@ -27,5 +29,18 @@ public class KeyIgnition : MonoBehaviour
     {
         _active = !_active;
         SetGameObjects();
+    }
+
+    public void setMaxDistance(){
+        float distance = keyButton.transform.position.x;
+        if (distance >= 0.776){
+            Debug.Log("The distance is GREATER than 0.776");
+            distance = 0.776f;
+            Vector3 keyButtonTransform = new Vector3(distance,keyButton.transform.position.y, keyButton.transform.position.z);
+            keyButton.transform.position = keyButtonTransform;
+        }
+        else{
+            Debug.Log("The distance is NOT GREATER than 0.776");
+        }
     }
 }
