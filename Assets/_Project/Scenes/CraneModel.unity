@@ -3978,6 +3978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cable: {fileID: 790089697}
+  magnet: {fileID: 174234728}
 --- !u!120 &6574959692861505310
 LineRenderer:
   m_ObjectHideFlags: 0

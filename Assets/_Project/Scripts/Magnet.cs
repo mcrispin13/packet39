@@ -13,7 +13,8 @@ public class Magnet : MonoBehaviour
     public Transform pulleyLever;
 
     public float speed = 0.02f;
-    private bool extendStop = false;
+    private bool topLimit = false;
+    private bool lowLimit  =false;
     void Start()
     {
         
@@ -44,25 +45,25 @@ public class Magnet : MonoBehaviour
     {
         extendStopToggle();
         float current_position = magnetObject.transform.position.y;
-        if(!extendStop) transform.Translate(Vector3.forward * Time.deltaTime);
-        extendStop = false;
+        if(!lowLimit) transform.Translate(Vector3.forward * Time.deltaTime);
     }
 
     private void RetractMagnet(){
         extendStopToggle();
         float current_position = magnetObject.transform.position.y;
-        if(!extendStop) transform.Translate(Vector3.back * Time.deltaTime);
-        extendStop = false;
+        if(!topLimit) transform.Translate(Vector3.back * Time.deltaTime);
     }
 
     private void extendStopToggle(){
         float current_position = magnetObject.transform.position.y;
-        if (current_position < 0.18 || current_position >= subBoomBody.position.y){
-            extendStop = true;
-            // if (current_position < 0.18) subBoomBody.position.y = 0.18f;
-            // else{
-            //     current_position = subBoomBody.position.y - 0.3f;
-            // }
+        if (current_position < 0.18){
+            lowLimit = true;
+            topLimit = false;
+        }
+
+        if (current_position > subBoomBody.position.y){
+            topLimit = true;
+            lowLimit = false;
         }
     }
 }
