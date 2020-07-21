@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -12,7 +13,46 @@ public class UIManager : Singleton<UIManager>
     public GameObject extendBoom;
     public GameObject pickUp;
     public GameObject dropBoom;
+    public GameObject startCanvas;
+    public GameObject pauseCanvas;
+    public GameObject screenCanvas;
 
+    void Start()
+    {
+        ResetUI();
+        Time.timeScale = 0f;
+        startCanvas.SetActive(true);
+    }
+
+    void ResetUI()
+    {
+        startCanvas.SetActive(false);
+        pauseCanvas.SetActive(false);
+        screenCanvas.SetActive(false);
+    }
+
+    void StartGame()
+    {
+        ResetUI();
+        screenCanvas.SetActive(true);
+        Time.timeScale = 1f;
+    }
+
+    void PauseGame(bool value)
+    {
+        screenCanvas.SetActive(!value);
+        Time.timeScale = (value) ? 0f : 1f;
+        pauseCanvas.SetActive(value);
+    }
+    void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     public void IgnitionDone()
     {
         ignition.transform.GetChild(0).gameObject.SetActive(true);

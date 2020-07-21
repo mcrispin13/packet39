@@ -4434,6 +4434,9 @@ MonoBehaviour:
   extendBoom: {fileID: 1707972936}
   pickUp: {fileID: 846521021}
   dropBoom: {fileID: 1093282585}
+  startCanvas: {fileID: 469865039}
+  pauseCanvas: {fileID: 1499453252}
+  screenCanvas: {fileID: 820291197}
 --- !u!1 &1728191562
 GameObject:
   m_ObjectHideFlags: 0
