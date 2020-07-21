@@ -61,9 +61,14 @@ public class Magnet : MonoBehaviour
             topLimit = false;
         }
 
-        if (current_position > subBoomBody.position.y){
+        if (current_position > subBoomBody.position.y - 0.1){
             topLimit = true;
             lowLimit = false;
         }
     }
+
+
+    // public void OnTriggerEnter(){
+
+    // }
 }
