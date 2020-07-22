@@ -17,39 +17,39 @@ public class UIManager : Singleton<UIManager>
     public GameObject pauseCanvas;
     public GameObject screenCanvas;
 
-    void Start()
+    public void Start()
     {
         ResetUI();
         Time.timeScale = 0f;
         startCanvas.SetActive(true);
     }
 
-    void ResetUI()
+    public void ResetUI()
     {
         startCanvas.SetActive(false);
         pauseCanvas.SetActive(false);
         screenCanvas.SetActive(false);
     }
 
-    void StartGame()
+    public void StartGame()
     {
         ResetUI();
-        screenCanvas.SetActive(true);
+        startCanvas.SetActive(true);
         Time.timeScale = 1f;
     }
 
-    void PauseGame(bool value)
+    public void PauseGame(bool value)
     {
         screenCanvas.SetActive(!value);
         Time.timeScale = (value) ? 0f : 1f;
         pauseCanvas.SetActive(value);
     }
-    void QuitGame()
+    public void QuitGame()
     {
         Application.Quit();
     }
 
-    void RestartGame()
+    public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
