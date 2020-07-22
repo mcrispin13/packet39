@@ -34,7 +34,7 @@ public class UIManager : Singleton<UIManager>
     public void StartGame()
     {
         ResetUI();
-        startCanvas.SetActive(true);
+        screenCanvas.SetActive(true);
         Time.timeScale = 1f;
     }
 
