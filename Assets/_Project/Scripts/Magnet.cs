@@ -37,9 +37,11 @@ public class Magnet : MonoBehaviour
         }
         
 
-        Debug.Log("The y position is: " + magnetObject.transform.position.y);
+        Debug.Log("magnet y position: " + magnetObject.transform.position.y);
 
-        Debug.Log("the angle of the lever is: " + angle);
+        Debug.Log("subBoom y position: " + subBoomBody.position.y);
+
+        Debug.Log("sweet spot" + (subBoomBody.position.y - 0.05));
         
     }
 
@@ -64,7 +66,7 @@ public class Magnet : MonoBehaviour
             topLimit = false;
         }
 
-        else if (current_position > subBoomBody.position.y + 0.05){
+        else if (current_position > subBoomBody.position.y - 0.05){
             topLimit = true;
             lowLimit = false;
         }
