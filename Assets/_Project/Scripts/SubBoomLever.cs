@@ -5,17 +5,17 @@ using UnityEngine;
 //most we want to move on x axis -0.79
 public class SubBoomLever : MonoBehaviour
 {
-    
+
     public Transform lever;
     public Transform subBoomBody;
     public Transform boomBody;
     public float speed = 0.03f;
     private bool extendStop = false;
-
+    private bool isDone = false;
     private void OnTriggerEnter(Collider other)
     {
         extendStop = true;
-        
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -27,7 +27,7 @@ public class SubBoomLever : MonoBehaviour
     private void ExtendBoom()
     {
         float current_position = subBoomBody.position.x;
-        if(!extendStop) transform.Translate(Vector3.left * Time.deltaTime);
+        if (!extendStop) transform.Translate(Vector3.left * Time.deltaTime);
     }
     private void RetractBoom()
     {
@@ -37,23 +37,29 @@ public class SubBoomLever : MonoBehaviour
     }
     void Update()
     {
-        
+
         float angle = lever.transform.eulerAngles.x;
         if (angle > 315 && angle < 350)
         {
-           
+
             ExtendBoom();
             //Debug.Log("Angle is: " + angle);
             //Debug.Log("The subboom's x position is: " + subBoomBody.position.x);
             //Debug.Log("The subboom's y position is: " + subBoomBody.position.y);
             //Debug.Log("The subboom's z position is: " + subBoomBody.position.z);
-            
+
         }
-        else if (angle <45 && angle > 15)
+        else if (angle < 45 && angle > 15)
         {
             RetractBoom();
             //Debug.Log("Angle is: " + angle);
 
+        }
+
+        if (angle != 0 && !isDone)
+        {
+            isDone = true;
+            UIManager.Instance.ExtendBoomDone();
         }
     }
 }

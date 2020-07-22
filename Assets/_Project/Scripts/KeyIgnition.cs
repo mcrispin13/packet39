@@ -10,6 +10,7 @@ public class KeyIgnition : MonoBehaviour
     public GameObject Lever2;
     public GameObject Lever3;
     public GameObject Lever4;
+    private bool isDone = false;
 
     public void Start()
     {
@@ -18,14 +19,19 @@ public class KeyIgnition : MonoBehaviour
 
     private void SetGameObjects()
     {
-        Lever1.layer = (_active)? 0 : 11;
-        Lever2.layer = (_active)? 0 : 11;
-        Lever3.layer = (_active)? 0 : 11;
-        Lever4.layer = (_active)? 0 : 11;
+        Lever1.layer = (_active) ? 0 : 11;
+        Lever2.layer = (_active) ? 0 : 11;
+        Lever3.layer = (_active) ? 0 : 11;
+        Lever4.layer = (_active) ? 0 : 11;
     }
     public void Toggle()
     {
         _active = !_active;
+        if (_active && !isDone)
+        {
+            isDone = true;
+            UIManager.Instance.IgnitionDone();
+        }
         SetGameObjects();
     }
 }
