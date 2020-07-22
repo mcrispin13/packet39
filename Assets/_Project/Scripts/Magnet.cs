@@ -66,7 +66,7 @@ public class Magnet : MonoBehaviour
             topLimit = false;
         }
 
-        else if (current_position > subBoomBody.position.y - 0.05){
+        else if (current_position > subBoomBody.position.y - 0.05 || subBoomBody.position.y < 1.24){
             topLimit = true;
             lowLimit = false;
         }
