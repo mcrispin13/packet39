@@ -12,7 +12,7 @@ public class Magnet : MonoBehaviour
 
     public Transform pulleyLever;
 
-    public float speed = 0.02f;
+    public float speed = 0.015f;
     private bool topLimit = false;
     private bool lowLimit  =false;
     void Start()
@@ -23,13 +23,14 @@ public class Magnet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        extendStopToggle();
         float angle = pulleyLever.transform.eulerAngles.x;
         if (angle > 315 && angle < 350)
         {
             ExtendMagnet();  
             
         }
-        else if (angle <45 && angle > 15)
+        else if (angle <45 && angle > 0)
         {
             RetractMagnet();
 
@@ -37,19 +38,21 @@ public class Magnet : MonoBehaviour
         
 
         Debug.Log("The y position is: " + magnetObject.transform.position.y);
+
+        Debug.Log("the angle of the lever is: " + angle);
         
     }
 
 
     private void ExtendMagnet()
     {
-        extendStopToggle();
+        
         float current_position = magnetObject.transform.position.y;
         if(!lowLimit) transform.Translate(Vector3.forward * Time.deltaTime);
     }
 
     private void RetractMagnet(){
-        extendStopToggle();
+
         float current_position = magnetObject.transform.position.y;
         if(!topLimit) transform.Translate(Vector3.back * Time.deltaTime);
     }
@@ -61,8 +64,13 @@ public class Magnet : MonoBehaviour
             topLimit = false;
         }
 
-        if (current_position > subBoomBody.position.y - 0.1){
+        else if (current_position > subBoomBody.position.y - 0.05){
             topLimit = true;
+            lowLimit = false;
+        }
+
+        else {
+            topLimit = false;
             lowLimit = false;
         }
     }
