@@ -44,6 +44,21 @@ public class Magnet : MonoBehaviour
         Debug.Log("sweet spot" + (subBoomBody.position.y - 0.05));
         
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "floor")
+        {
+            lowLimit = true;
+        }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "floor")
+        {
+            lowLimit = false;
+        }
+    }
 
 
     private void ExtendMagnet()
@@ -61,19 +76,15 @@ public class Magnet : MonoBehaviour
 
     private void extendStopToggle(){
         float current_position = magnetObject.transform.position.y;
-        if (current_position < 0.18){
-            lowLimit = true;
-            topLimit = false;
-        }
-
-        else if (current_position > subBoomBody.position.y - 0.05 || subBoomBody.position.y < 1.24){
+        if (current_position > subBoomBody.position.y - 0.08 || subBoomBody.position.y < 1.24){
+           
             topLimit = true;
-            lowLimit = false;
+            
         }
-
+        
         else {
             topLimit = false;
-            lowLimit = false;
+      
         }
     }
 
