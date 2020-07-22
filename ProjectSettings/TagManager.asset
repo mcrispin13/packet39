@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ignite
   - floor
+  - top
+  - bottom
   layers:
   - Default
   - TransparentFX
