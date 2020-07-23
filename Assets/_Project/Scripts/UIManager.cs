@@ -13,43 +13,43 @@ public class UIManager : Singleton<UIManager>
     public GameObject extendBoom;
     public GameObject pickUp;
     public GameObject dropBoom;
-    // public GameObject startCanvas;
-    // public GameObject pauseCanvas;
-    // public GameObject screenCanvas;
+     public GameObject startCanvas;
+     public GameObject pauseCanvas;
+     public GameObject screenCanvas;
 
-    // public void Start()
-    // {
-    //     ResetUI();
-    //     Time.timeScale = 1f;
-    //     startCanvas.SetActive(true);
-    // }
+    public void Start()
+    {
+        ResetUI();
+        Time.timeScale = 0f;
+        startCanvas.SetActive(true);
+    }
 
-    // public void ResetUI()
-    // {
-    //     startCanvas.SetActive(false);
-    //     pauseCanvas.SetActive(false);
-    //     screenCanvas.SetActive(false);
-    // }
+    public void ResetUI()
+    {
+        startCanvas.SetActive(false);
+        pauseCanvas.SetActive(false);
+        screenCanvas.SetActive(false);
+    }
 
-    // public void StartGame()
-    // {
-    //     ResetUI();
-    //     startCanvas.SetActive(true);
-    //     Time.timeScale = 1f;
-    // }
+    public void StartGame()
+    {
+        ResetUI();
+        screenCanvas.SetActive(true);
+        Time.timeScale = 1f;
+    }
 
-    // public void PauseGame(bool value)
-    // {
-    //     screenCanvas.SetActive(!value);
-    //     Time.timeScale = (value) ? 0f : 1f;
-    //     pauseCanvas.SetActive(value);
-    // }
-    // public void QuitGame()
-    // {
-    //     Application.Quit();
-    // }
+    public void PauseGame(bool value)
+    {
+        screenCanvas.SetActive(!value);
+        Time.timeScale = (value) ? 0f : 1f;
+        pauseCanvas.SetActive(value);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 
-    void RestartGame()
+    public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
