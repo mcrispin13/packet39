@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarrelTrigger : MonoBehaviour
+public class BarrelTrigger : Singleton<BarrelTrigger>
 {
     public GameObject barrel;
+
+    public GameObject magnet;
+
+    public bool magnetOn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +25,15 @@ public class BarrelTrigger : MonoBehaviour
     {
         if (other.tag == "magnet")
         {
-            
-            barrel.GetComponent<FixedJoint>().connectedBody = other.GetComponent<Rigidbody>();
-            Debug.Log("this is the fixed joint " + barrel.GetComponent<FixedJoint>().connectedBody);
+
+            if(magnetOn){
+                barrel.GetComponent<FixedJoint>().connectedBody = other.GetComponent<Rigidbody>();
+                Debug.Log("this is the fixed joint " + barrel.GetComponent<FixedJoint>().connectedBody);
+            }
+
+            else{
+                barrel.GetComponent<FixedJoint>().connectedBody = null;
+            }
         }
     }
 }
