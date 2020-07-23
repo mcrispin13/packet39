@@ -8,10 +8,7 @@ public class BoomLever : MonoBehaviour
     public Transform boomBody;
     public float angle;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool isDone = false;
 
     // Update is called once per frame
     void Update()
@@ -20,13 +17,11 @@ public class BoomLever : MonoBehaviour
         //if (angle < -9) angle = -9;
         //Debug.Log("Angle=" + angle);
         Change();
-
-
-
-
-
-
-
+        if (angle != 0 && !isDone)
+        {
+            isDone = true;
+            UIManager.Instance.RotateBoomDone();
+        }
     }
 
     void Change()
