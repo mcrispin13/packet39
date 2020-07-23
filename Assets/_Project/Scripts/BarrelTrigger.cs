@@ -7,6 +7,7 @@ public class BarrelTrigger : Singleton<BarrelTrigger>
     public GameObject barrel;
 
     public GameObject magnet;
+    private float speed = 0.01f;
 
     public bool magnetOn = false;
     // Start is called before the first frame update
@@ -26,14 +27,19 @@ public class BarrelTrigger : Singleton<BarrelTrigger>
         if (other.tag == "magnet")
         {
 
-            if(magnetOn){
+            if (magnetOn)
+            {
+                barrel.AddComponent<FixedJoint>();
                 barrel.GetComponent<FixedJoint>().connectedBody = other.GetComponent<Rigidbody>();
-                Debug.Log("this is the fixed joint " + barrel.GetComponent<FixedJoint>().connectedBody);
+                //Debug.Log("this is the fixed joint " + barrel.GetComponent<FixedJoint>().connectedBody);
             }
 
-            else{
-                barrel.GetComponent<FixedJoint>().connectedBody = null;
+            else
+            {
+                var container = barrel.GetComponent<FixedJoint>();
+                Destroy(container);
             }
         }
     }
+
 }
