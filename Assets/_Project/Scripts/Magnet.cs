@@ -79,9 +79,13 @@ public class Magnet : MonoBehaviour
 
     private void ExtendMagnet()
     {
-        
+       
         float current_position = magnetObject.transform.position.y;
-        if ( active && !lowLimit) { transform.Translate(Vector3.forward *speed * Time.deltaTime ); }
+        if ( active && !lowLimit)
+        {
+            transform.Translate(Vector3.forward *speed * Time.deltaTime );
+            UIManager.Instance.ExtendPulleyDone();
+        }
        
     }
 

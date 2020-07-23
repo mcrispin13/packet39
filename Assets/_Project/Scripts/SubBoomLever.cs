@@ -56,7 +56,7 @@ public class SubBoomLever : MonoBehaviour
 
         }
 
-        if (angle != 0 && !isDone)
+        if (angle != 0 )
         {
             isDone = true;
             UIManager.Instance.ExtendBoomDone();

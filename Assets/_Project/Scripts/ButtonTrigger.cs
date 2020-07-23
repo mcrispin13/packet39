@@ -40,6 +40,9 @@ public class ButtonTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if (other.tag == "Button" && machineState == false){
+          
+            UIManager.Instance.IgnitionDone();
+            
             //  materialColored = new Material(Shader.Find("Diffuse"));
             //  materialColored.color = currentColor = ObjectColor;
             Debug.Log("Machine has turned on");
