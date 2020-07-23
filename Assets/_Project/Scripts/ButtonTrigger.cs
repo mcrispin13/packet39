@@ -23,7 +23,9 @@ public class ButtonTrigger : MonoBehaviour
     public GameObject subBoomLever;
 
 
+    //public AudioClip turnOnAudioClip;
 
+    //AudioSource turnOnSource;
     void Start()
     {
         bodyLever.GetComponent<SphereCollider>().enabled = false;
@@ -46,6 +48,7 @@ public class ButtonTrigger : MonoBehaviour
             //  materialColored = new Material(Shader.Find("Diffuse"));
             //  materialColored.color = currentColor = ObjectColor;
             Debug.Log("Machine has turned on");
+            //turnOnSource.PlayOneShot(turnOnAudioClip,0.6f);
             other.GetComponent<Renderer>().material.color = greenColor;
             bodyLever.GetComponent<SphereCollider>().enabled = true;
             boomLever.GetComponent<SphereCollider>().enabled = true;

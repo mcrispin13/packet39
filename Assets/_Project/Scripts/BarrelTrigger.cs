@@ -5,6 +5,10 @@ using UnityEngine;
 public class BarrelTrigger : MonoBehaviour
 {
     public GameObject barrel;
+
+
+
+    public bool isConnected;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +23,9 @@ public class BarrelTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.tag == "magnet")
-        //{
-        //    barrel.AddComponent<FixedJoint>();
-        //    barrel.GetComponent<FixedJoint>().connectedBody = other.GetComponent<Rigidbody>();
-        //}
+        if (other.tag == "magnet")
+        {
+           barrel.GetComponent<FixedJoint>().connectedBody = other.GetComponent<Rigidbody>();;
+        }
     }
 }

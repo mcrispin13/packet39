@@ -10,6 +10,7 @@ TagManager:
   - top
   - bottom
   - magnet
+  - magnet button
   layers:
   - Default
   - TransparentFX
