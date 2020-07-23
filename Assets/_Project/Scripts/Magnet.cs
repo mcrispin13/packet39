@@ -50,7 +50,8 @@ public class Magnet : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "bottom")
+       
+        if (other.tag == "bottom" || other.tag == "barrel")
         {
             lowLimit = true;
             
@@ -92,7 +93,12 @@ public class Magnet : MonoBehaviour
     private void RetractMagnet(){
 
         float current_position = magnetObject.transform.position.y;
-        if(active && !topLimit) transform.Translate(Vector3.back * speed *Time.deltaTime);
+        if (active && !topLimit)
+        {
+            
+            transform.Translate(Vector3.back * speed * Time.deltaTime);
+            lowLimit = false;
+        }
     }
 
     public void Grabbed()

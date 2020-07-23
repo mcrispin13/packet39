@@ -19,10 +19,11 @@ public class BarrelTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.tag == "magnet")
-        //{
-        //    barrel.AddComponent<FixedJoint>();
-        //    barrel.GetComponent<FixedJoint>().connectedBody = other.GetComponent<Rigidbody>();
-        //}
+        if (other.tag == "magnet")
+        {
+            
+            barrel.GetComponent<FixedJoint>().connectedBody = other.GetComponent<Rigidbody>();
+            Debug.Log("this is the fixed joint " + barrel.GetComponent<FixedJoint>().connectedBody);
+        }
     }
 }
