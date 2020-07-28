@@ -19,8 +19,9 @@ public class Platform : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other){
-        if (other.tag == "barrel"){
+        
             platform.GetComponent<Light>().color = doneColor;
-        }
+            UIManager.Instance.DropBoomDone();
+        
     }
 }

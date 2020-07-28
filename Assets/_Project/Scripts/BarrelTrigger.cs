@@ -29,15 +29,16 @@ public class BarrelTrigger : Singleton<BarrelTrigger>
 
             if (magnetOn)
             {
-                barrel.AddComponent<FixedJoint>();
+                
                 barrel.GetComponent<FixedJoint>().connectedBody = other.GetComponent<Rigidbody>();
-                //Debug.Log("this is the fixed joint " + barrel.GetComponent<FixedJoint>().connectedBody);
+                Debug.Log("this is the fixed joint " + barrel.GetComponent<FixedJoint>().connectedBody);
             }
 
             else
             {
-                var container = barrel.GetComponent<FixedJoint>();
-                Destroy(container);
+                UIManager.Instance.DropBoomDone();
+                barrel.GetComponent<FixedJoint>().connectedBody = null;
+                Destroy(barrel.GetComponent<FixedJoint>());
             }
         }
     }
