@@ -1,5 +1,9 @@
 # Project Title
 
+## Before Getting Started
+Make sure that you are on the NEW-MASTER branch to run the simulation.
+
+## Intro
 Cranes are heavy, dangerous and expensive equipment. Crane accidents are often the direct result of negligence of the crane-related professionals or the lack of adequate operator training or experience.Adequate training is a must. A crane simulator is a cost-efficient solution for offering training and refresh training to crane operators in a safe and sound environment with no risk of damage or injuries.
 
 ## Getting Started
